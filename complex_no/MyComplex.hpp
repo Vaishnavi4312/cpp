@@ -9,7 +9,8 @@ public:
     MyComplex();
 
     // Function to print complex number
-    void print();
+    void print_add();
+    void print_sub(); 
 
     void add(MyComplex, MyComplex);
     void sub(MyComplex, MyComplex);
