@@ -3,39 +3,20 @@
 #include "MyComplex.hpp"
 using namespace std;
 
-//:: scope resolution operator
-MyComplex ::MyComplex()
+MyComplex::MyComplex()
 {
     real = 0;
     img = 0;
 }
 
-void MyComplex::print_add()
+void MyComplex::print()
 {
     cout << real << "+" << img << "i";
-}
-void MyComplex::print_sub()
-{
-    cout << real << "-" << img << "i";
-}
-void MyComplex::print_multi()
-{
-    cout << real << "*" << img << "i";
-}
-void MyComplex::print_div()
-{
-    cout << real << "/" << img << "i";
-}
-void MyComplex::print_norm()
-{
-    cout << real << "+" << img << "i";
-}
-void MyComplex::print_compexConjugate()
-{
 }
 
 void MyComplex::add(MyComplex c1, MyComplex c2)
 {
+
     real = c1.real + c2.real;
     img = c1.img + c2.img;
 }
@@ -54,17 +35,17 @@ void MyComplex::multi(MyComplex c1, MyComplex c2)
 
 void MyComplex::div(MyComplex c1, MyComplex c2)
 {
-    real = (c1.real * c2.real + c1.img * c2.img) / (c2.real * c2.real + c2.img * c2.img);
-    img = (c1.real * c2.img + c1.img * c2.real) / (c2.real * c2.real + c2.img * c2.img);
+    cout << (c1.real * c2.real + c1.img * c2.img) / (c2.real * c2.real + c2.img * c2.img);
+    cout << (c1.real * c2.img + c1.img * c2.real) / (c2.real * c2.real + c2.img * c2.img);
 }
 
 void MyComplex::norm(MyComplex c1, MyComplex c2)
 {
-    real = sqrt(c1.real * c1.real + c1.img * c1.img);
-    img = sqrt(c2.real * c2.real + c2.img * c2.img);
+    cout << sqrt(c1.real * c1.real + c1.img * c1.img) << endl;
+    cout << sqrt(c2.real * c2.real + c2.img * c2.img) << endl;
 }
 
-void MyComplex::complexConjugate(MyComplex c1, MyComplex c2)
+void MyComplex::Conjugate(MyComplex c1, MyComplex c2)
 {
     if (img < 0)
     {
